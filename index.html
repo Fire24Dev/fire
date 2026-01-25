@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0d0d1a;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* SFONDO ANIMATO */
+        .bg-glow {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1e1e3f 0%, #0d0d1a 100%);
+            z-index: -1;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* LOGO FIRE */
+        .logo-fire {
+            max-width: 250px;
+            width: 100%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 20px rgba(233, 69, 96, 0.8));
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 20px rgba(233, 69, 96, 0.6)); }
+            50% { transform: scale(1.05); filter: drop-shadow(0 0 40px rgba(255, 122, 0, 0.9)); }
+        }
+
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.5rem;
+            transform: skewX(-12deg); /* TESTO STORTO */
+            background: linear-gradient(to right, #e94560, #ff7a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            margin: 20px 0;
+            color: #aaa;
+            text-transform: uppercase;
+        }
+
+        /* SOCIAL BUTTONS STORTO-STYLE */
+        .social-bar {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-btn {
+            background: #16213e;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 900;
+            transform: skewX(-15deg); /* BOTTONI STORTI */
+            transition: 0.3s;
+            border-left: 4px solid #e94560;
+        }
+
+        .social-btn:hover {
+            background: #e94560;
+            transform: skewX(-15deg) translateY(-5px);
+            box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+        }
+
+        /* SEZIONE BIO */
+        .section-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            transform: skewX(-8deg); /* TITOLO STORTO */
+            color: #ff7a00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #444;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>
+        <img src="fire.png" alt="Fire Logo" class="logo-fire">
+        
+        <h1 class="hero-title">FIRETHESUPER</h1>
+        <p class="hero-subtitle">Content Creator & Gamer</p>
+
+        <div class="social-bar">
+            <a href="https://youtube.com/@firethesuper?si=BOKU_8lT8K-hps6R" class="social-btn"><i class="fab fa-youtube"></i> YOUTUBE</a>
+            <a href="https://www.twitch.tv/firethesuper" class="social-btn"><i class="fab fa-twitch"></i> TWITCH</a>
+            <a href="https://discord.gg/KsjxWutDzf" class="social-btn"><i class="fab fa-discord"></i> DISCORD</a>
+        </div>
+    </header>
+
+    <div class="section-container">
+        <h2 class="section-title">Chi Sono</h2>
+        <p>Ehilà! Sono Fire. Benvenuti nel mio angolo di web. Qui troverete tutto ciò che riguarda i miei video e le mie live. Sono uno YouTuber e Streamer che ama condividere sessioni di gameplay e momenti epici con la community. Se cerchi energia e divertimento, sei nel posto giusto!</p>
+    </div>
+
+    <footer>
+        FIRE &copy; 2026
+    </footer>
+
+</body>
+</html>
